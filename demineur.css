@@ -1,0 +1,22 @@
+.conteneur{
+	background-color: #b5b5b5;
+	display: inline-grid;
+	grid-template-columns: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px ;
+	grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px ;
+	grid-gap:5px;
+	padding:10px;
+}
+.enclenche{
+	background-color: #9c9c9c;
+	text-align: center;
+	color:#404040
+}
+.non_enclenche{
+	background-color: #c9c9c9;
+	
+}
+.mine{
+	background-color: #ff0000;
+	height:20px;
+	width:20px;
+}
