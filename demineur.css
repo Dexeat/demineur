@@ -16,7 +16,7 @@
 	
 }
 .mine{
-	background-color: #ff0000;
+	background: url('images/mine.png');
 	height:20px;
 	width:20px;
 }
