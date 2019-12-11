@@ -33,10 +33,4 @@ for (var u = 0; u < 10; u++) {
 }	
 
 
-
-
-
-$('#'+1).html("test")
-
-
 $('.colone'+i+".ligne"+j).html();
