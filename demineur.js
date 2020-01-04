@@ -46,8 +46,8 @@ function number() {
 	for (var x = 1; x < 11; x++) {
 		for (var y = 1; y < 11; y++) {
 			if ( $('.colone'+x + ".ligne"+y).html() >= 9 ) {
-				console.log("trouver");
-				console.log(x,y);
+				//console.log("trouver");
+				//console.log(x,y);
 				$('.colone'+(x -1) + ".ligne"+(y -1)).html(parseInt($('.colone'+(x -1) + ".ligne"+(y -1)).html(), 10)+1)
 				$('.colone'+(x -1) + ".ligne"+(y)).html(parseInt($('.colone'+(x -1) + ".ligne"+(y)).html(), 10)+1)
 				$('.colone'+(x -1) + ".ligne"+(y+1)).html(parseInt($('.colone'+(x -1) + ".ligne"+(y+1)).html(), 10)+1)
@@ -89,13 +89,13 @@ function decouvre(casei) {
 	//console.log(casei.attr("class"))
 	classi = casei.attr("class");
 	classi = classi.split(" ");
-	console.log(classi)
+	//console.log(classi)
 
 	//extrait le nb
 	nbcolone = parseInt(classi[0].replace('colone',''))
 	nbligne = parseInt(classi[1].replace('ligne',''))
-	console.log(nbcolone)
-	console.log(nbligne)
+	//console.log(nbcolone)
+	//console.log(nbligne)
 
 	if ( $('.colone'+ (nbcolone-1)+'.ligne'+(nbligne -1)).html() <9  ) {
 		
@@ -181,7 +181,16 @@ function decouvre(casei) {
 
 }
 
-
+function BOOM() {
+	for (var x = 1; x < 11; x++) {
+		for (var y = 1; y < 11; y++) {
+			if ($('.colone'+x + ".ligne"+y).html() > 8) {
+				$('.colone'+x + ".ligne"+y).html("")
+				$('.colone'+x + ".ligne"+y).addClass("mine")
+			}
+		}
+	}
+}
 
 
 
@@ -194,8 +203,14 @@ enclenche.on('click',function() {
 		clearzero();
 	}
 	if ($(this).html()<=8) {
-		console.log($(this));
+		//console.log($(this));
 		decouvre($(this))
 	}
+
+	if ($(this).html()>8) {
+		//console.log("boom");
+		BOOM()
+	}
+
 
 })
