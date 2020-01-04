@@ -9,10 +9,12 @@
 .enclenche{
 	background-color: #9c9c9c;
 	text-align: center;
-	color:#404040
+	/**color:#9c9c9c**/
 }
 .non_enclenche{
 	background-color: #c9c9c9;
+	text-align: center;
+	color: #D57927;
 	
 }
 .mine{
