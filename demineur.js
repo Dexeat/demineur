@@ -3,7 +3,8 @@ let enclenche = $('.enclenche')
 let non_enclenche = $('.non_enclenche')
 let mine = $('.mine')
 let gene =false;
-
+let num =0;
+let listecase = []
 
 
 //ALEAT
@@ -82,6 +83,7 @@ function decouvre(casei) {
 	let classi;
 	let nbcolone;
 	let nbligne;
+	
 
 	casei.removeClass("enclenche")
 	casei.addClass("non_enclenche")
@@ -99,8 +101,10 @@ function decouvre(casei) {
 
 	if ( $('.colone'+ (nbcolone-1)+'.ligne'+(nbligne -1)).html() <9  ) {
 		
-		$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne-1)).removeClass("enclenche")
-		$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne-1)).addClass("non_enclenche")
+		listecase.push( $('.colone'+ (nbcolone-1)+'.ligne'+(nbligne -1)))
+		
+		//$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne-1)).removeClass("enclenche")
+		//$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne-1)).addClass("non_enclenche")
 
 		if ($('.colone'+ (nbcolone-1)+'.ligne'+(nbligne -1)).html() == "" ) {
 			decouvre($('.colone'+ (nbcolone-1)+'.ligne'+(nbligne -1)))
@@ -109,8 +113,10 @@ function decouvre(casei) {
 
 	if ( $('.colone'+ (nbcolone-1)+'.ligne'+(nbligne )).html() <9  ) {
 		
-		$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne)).removeClass("enclenche")
-		$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne)).addClass("non_enclenche")
+		listecase.push($('.colone'+ (nbcolone-1)+'.ligne'+(nbligne )))
+
+		//$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne)).removeClass("enclenche")
+		//$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne)).addClass("non_enclenche")
 
 		if ($('.colone'+ (nbcolone-1)+'.ligne'+(nbligne)).html() == "" ) {
 			decouvre($('.colone'+ (nbcolone-1)+'.ligne'+(nbligne)))
@@ -119,8 +125,11 @@ function decouvre(casei) {
 
 	if ( $('.colone'+ (nbcolone-1)+'.ligne'+(nbligne +1)).html() <9  ) {
 		
-		$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne+1)).removeClass("enclenche")
-		$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne+1)).addClass("non_enclenche")
+
+		listecase.push( $('.colone'+ (nbcolone-1)+'.ligne'+(nbligne +1)))
+
+		//$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne+1)).removeClass("enclenche")
+		//$('.colone'+ (nbcolone-1)+'.ligne'+(nbligne+1)).addClass("non_enclenche")
 
 		if ($('.colone'+ (nbcolone-1)+'.ligne'+(nbligne +1)).html() == "" ) {
 			decouvre($('.colone'+ (nbcolone-1)+'.ligne'+(nbligne +1)))
@@ -129,8 +138,10 @@ function decouvre(casei) {
 
 	if ( $('.colone'+ (nbcolone)+'.ligne'+(nbligne -1)).html() <9  ) {
 		
-		$('.colone'+ (nbcolone)+'.ligne'+(nbligne-1)).removeClass("enclenche")
-		$('.colone'+ (nbcolone)+'.ligne'+(nbligne-1)).addClass("non_enclenche")
+
+		listecase.push($('.colone'+ (nbcolone)+'.ligne'+(nbligne -1)))
+		//$('.colone'+ (nbcolone)+'.ligne'+(nbligne-1)).removeClass("enclenche")
+		//$('.colone'+ (nbcolone)+'.ligne'+(nbligne-1)).addClass("non_enclenche")
 
 		if ($('.colone'+ (nbcolone)+'.ligne'+(nbligne -1)).html() == "" ) {
 			decouvre($('.colone'+ (nbcolone)+'.ligne'+(nbligne -1)))
@@ -139,8 +150,9 @@ function decouvre(casei) {
 
 	if ( $('.colone'+ (nbcolone)+'.ligne'+(nbligne +1)).html() <9 ) {
 		
-		$('.colone'+ (nbcolone)+'.ligne'+(nbligne+1)).removeClass("enclenche")
-		$('.colone'+ (nbcolone)+'.ligne'+(nbligne+1)).addClass("non_enclenche")
+		listecase.push($('.colone'+ (nbcolone)+'.ligne'+(nbligne +1)))
+		//$('.colone'+ (nbcolone)+'.ligne'+(nbligne+1)).removeClass("enclenche")
+		//$('.colone'+ (nbcolone)+'.ligne'+(nbligne+1)).addClass("non_enclenche")
 
 		if ($('.colone'+ (nbcolone)+'.ligne'+(nbligne +1)).html() == "" ) {
 			decouvre($('.colone'+ (nbcolone)+'.ligne'+(nbligne +1)))
@@ -149,8 +161,9 @@ function decouvre(casei) {
 
 	if ( $('.colone'+ (nbcolone+1)+'.ligne'+(nbligne+1 )).html() <9  ) {
 		
-		$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne+1)).removeClass("enclenche")
-		$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne+1)).addClass("non_enclenche")
+		listecase.push($('.colone'+ (nbcolone+1)+'.ligne'+(nbligne+1 )))
+		//$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne+1)).removeClass("enclenche")
+		//$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne+1)).addClass("non_enclenche")
 
 		if ($('.colone'+ (nbcolone+1)+'.ligne'+(nbligne+1)).html() == "" ) {
 			decouvre($('.colone'+ (nbcolone+1)+'.ligne'+(nbligne+1)))
@@ -159,8 +172,9 @@ function decouvre(casei) {
 
 	if ( $('.colone'+ (nbcolone+1)+'.ligne'+(nbligne )).html() <9  ) {
 		
-		$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne)).removeClass("enclenche")
-		$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne)).addClass("non_enclenche")
+		listecase.push($('.colone'+ (nbcolone+1)+'.ligne'+(nbligne )))
+		//$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne)).removeClass("enclenche")
+		//$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne)).addClass("non_enclenche")
 
 		if ($('.colone'+ (nbcolone+1)+'.ligne'+(nbligne)).html() == "" ) {
 			decouvre($('.colone'+ (nbcolone+1)+'.ligne'+(nbligne)))
@@ -169,15 +183,18 @@ function decouvre(casei) {
 
 	if ( $('.colone'+ (nbcolone+1)+'.ligne'+(nbligne-1 )).html() <9  ) {
 		
-		$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne-1)).removeClass("enclenche")
-		$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne-1)).addClass("non_enclenche")
+		listecase.push($('.colone'+ (nbcolone+1)+'.ligne'+(nbligne-1 )))
+		//$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne-1)).removeClass("enclenche")
+		//$('.colone'+ (nbcolone+1)+'.ligne'+(nbligne-1)).addClass("non_enclenche")
 
 		if ($('.colone'+ (nbcolone+1)+'.ligne'+(nbligne-1)).html() == "" ) {
 			decouvre($('.colone'+ (nbcolone+1)+'.ligne'+(nbligne-1)))
 		}
 	}
 
-
+	num++;
+	console.log(listecase)
+	console.log(num)
 
 }
 
